@@ -11,21 +11,21 @@
   "license": "Creative Commons",
   "devDependencies": {
     "@discord-player/extractor": "^7.1.0",
-    "@types/jsdom": "^21.1.7",
-    "@types/node": "^22.7.5",
+    "@types/jsdom": "^27.0.0",
+    "@types/node": "^22.1.9",
     "discord-player": "^7.1.0",
-    "discord.js": "^14.16.3",
-    "googlevideo": "^3.0.0",
-    "prettier": "^3.3.3",
-    "tsup": "^8.2.4",
-    "typescript": "^5.5.2"
+    "discord.js": "^14.23.2",
+    "googlevideo": "^4.0.4",
+    "prettier": "^3.6.2",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "bgutils-js": "^3.2.0",
-    "jsdom": "^26.1.0",
+    "jsdom": "^27.0.0",
     "tiny-typed-emitter": "^2.1.0",
-    "undici": "^7.1.0",
-    "youtubei.js": "^14.0.0"
+    "undici": "^7.16.0",
+    "youtubei.js": "^16.0.1"
   },
   "scripts": {
     "build": "npm run format && tsup",

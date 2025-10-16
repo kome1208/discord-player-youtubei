@@ -344,7 +344,7 @@ export class YoutubeiExtractor extends BaseExtractor<YoutubeiOptions> {
       format: "mp4",
     });
 
-    format.url = format.decipher(this.innerTube.session.player);
+    format.url = await format.decipher(this.innerTube.session.player);
 
     return createNativeReadable(
       format.url,
