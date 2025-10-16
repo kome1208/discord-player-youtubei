@@ -49,7 +49,7 @@ export async function stream<T extends boolean = false>(
     }));
 
   const info = await yt.getBasicInfo(vidId, {
-    client: client
+    client: client,
   });
 
   let fmt = info.chooseFormat(

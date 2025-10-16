@@ -164,7 +164,7 @@ export async function streamFromYT(
   // VIDEO DETECTED AS YT SHORTS OR youtu.be link
   if (!id) id = query.url.split("/").at(-1)?.split("?").at(0)!;
   const videoInfo = await innerTube.getBasicInfo(id, {
-    client: context.useClient
+    client: context.useClient,
   });
 
   if (videoInfo.basic_info.is_live)

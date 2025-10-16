@@ -15,7 +15,7 @@
     "@types/node": "^22.1.9",
     "discord-player": "^7.1.0",
     "discord.js": "^14.23.2",
-    "googlevideo": "^4.0.4",
+    "googlevideo": "^3.0.0",
     "prettier": "^3.6.2",
     "tsup": "^8.5.0",
     "typescript": "^5.9.3"
