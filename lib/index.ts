@@ -1,4 +1,4 @@
-import Innertube from "youtubei.js";
+import { Innertube, Platform, Types } from "youtubei.js";
 import { objectToToken } from "./common/tokenUtils";
 
 const exit = (message: any, clean: boolean) => {
@@ -9,6 +9,22 @@ const exit = (message: any, clean: boolean) => {
 
   throw new Error(message);
 };
+
+Platform.shim.eval = async (data: Types.BuildScriptResult, env: Record<string, Types.VMPrimative>) => {
+  const properties = [];
+
+  if(env.n) {
+    properties.push(`n: exportedVars.nFunction("${env.n}")`)
+  }
+
+  if (env.sig) {
+    properties.push(`sig: exportedVars.sigFunction("${env.sig}")`)
+  }
+
+  const code = `${data.output}\nreturn { ${properties.join(', ')} }`;
+
+  return new Function(code)();
+}
 
 export async function generateOauthTokens() {
   const youtube = await Innertube.create({
